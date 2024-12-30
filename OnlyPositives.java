@@ -10,17 +10,13 @@ public class OnlyPositives {
             System.out.println("Give a number:");
             int number = Integer.valueOf(scanner.nextLine());
 
-            if (number > 0) {
-                System.out.println(number * number);
-            }
-
             if (number < 0) {
                 System.out.println("Unsuitable number");
                 continue;
-            }
-
-            if (number == 0) {
+            } else if (number == 0){
                 break;
+            } else {
+                System.out.println(number * number );
             }
         }
 
