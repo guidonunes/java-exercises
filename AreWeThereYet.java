@@ -14,5 +14,6 @@ public class AreWeThereYet {
                 break;
             }
         }
+        scanner.close();
     }
 }

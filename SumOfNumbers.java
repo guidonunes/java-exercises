@@ -21,6 +21,6 @@ public class SumOfNumbers {
             }
         }
         System.out.println("Sum of the numbers: " + count);
-
+        scanner.close();
     }
 }

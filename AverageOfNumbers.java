@@ -27,5 +27,6 @@ public class AverageOfNumbers {
 
         double avg = (double) sum/count;
         System.out.println("Average of the numbers: " + avg);
+        scanner.close();
     }
 }
