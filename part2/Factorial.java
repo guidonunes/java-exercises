@@ -1,3 +1,4 @@
+package part2;
 
 import java.util.Scanner;
 
@@ -18,5 +19,6 @@ public class Factorial {
 
 
         System.out.println("Factorial: " + factorial);
+        scanner.close();
     }
 }

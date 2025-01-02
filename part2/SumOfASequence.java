@@ -1,4 +1,4 @@
-
+package part2;
 
 import java.util.Scanner;
 
@@ -18,6 +18,6 @@ public class SumOfASequence {
 
         System.out.println("Last number? " + num);
         System.out.println("The sum is " + sum);
-        scanner.out();
+        scanner.close();
     }
 }

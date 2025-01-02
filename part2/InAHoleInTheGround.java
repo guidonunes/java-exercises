@@ -1,3 +1,5 @@
+package part2;
+
 public class InAHoleInTheGround {
 
   public static void main(String[] args) {

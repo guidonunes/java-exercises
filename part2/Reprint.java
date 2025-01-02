@@ -1,3 +1,5 @@
+package part2;
+
 import java.util.Scanner;
 
 public class Reprint {
@@ -12,6 +14,7 @@ public class Reprint {
         for (int i = 0; i < input; i++) {
             printText();
         }
+        scanner.close();
     }
 
     public static void printText() {

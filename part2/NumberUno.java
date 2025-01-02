@@ -1,3 +1,5 @@
+package part2;
+
 
 import java.util.Scanner;
 
@@ -8,11 +10,10 @@ public class NumberUno {
 
         int number = numberUno();
         System.out.println(number);
-
+        scanner.close();
     }
 
     public static int numberUno() {
         return 1;
     }
-
 }

@@ -1,3 +1,4 @@
+package part2;
 
 import java.util.Scanner;
 
@@ -43,5 +44,6 @@ public class RepeatingBreakingAndRemembering {
         System.out.println("Average: " + avg);
         System.out.println("Even: " + even);
         System.out.println("Odd: " + odd);
+        scanner.close();
     }
 }
