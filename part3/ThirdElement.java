@@ -19,11 +19,7 @@ public class ThirdElement {
 
             list.add(input);
         }
-        list.add("Tom");
-        list.add("Emma");
-        list.add("Alex");
-        list.add("Mary");
-        list.add("Olga");
+
 
 
         System.out.println(list.get(2));
