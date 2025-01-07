@@ -30,5 +30,4 @@ public class RemoveLast {
         System.out.println(strings);
 
     }
-
 }
