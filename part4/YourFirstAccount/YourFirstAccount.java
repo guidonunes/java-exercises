@@ -1,5 +1,4 @@
-import part4.YourFirstAccount.Account;
-
+package part4.YourFirstAccount;
 public class YourFirstAccount {
 
   public static void main(String[] args) {
