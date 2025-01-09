@@ -1,19 +1,20 @@
 package part3;
 
+
 import java.util.Scanner;
 
-public class AgeOfTheOldest {
+public class NameOfTheOldest {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int eldest = 0;
+        String name = "";
 
         while(true) {
-
             String input = scanner.nextLine();
 
-            if (input.equals("")){
+            if(input.equals("")){
                 break;
             }
 
@@ -23,10 +24,11 @@ public class AgeOfTheOldest {
 
             if (age > eldest) {
                 eldest = age;
+                name = parts[0];
             }
         }
 
-        System.out.println("Age of the oldest: " + eldest);
+        System.out.println("Name of the oldest: " + name);
         scanner.close();
     }
 }
