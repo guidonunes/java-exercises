@@ -24,6 +24,5 @@ public class LastWords {
 
         }
         scanner.close();
-
     }
 }
