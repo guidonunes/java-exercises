@@ -17,7 +17,7 @@ public class IoobProgram {
         lines.add("up with his quantum theory while studying...");
 
         for (String line : lines) {
-            System.out.println(lines.get(10));
+            System.out.println(line.charAt(10));
         }
 
     }
