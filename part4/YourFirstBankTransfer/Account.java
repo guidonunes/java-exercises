@@ -1,4 +1,4 @@
-package part4.YourFirstTransfer;
+package part4.YourFirstBankTransfer;
 
 /*
  * DO NOT TOUCH THIS !
