@@ -18,6 +18,5 @@ public class Cubes {
             System.out.println(cube);
         }
         scanner.close();
-
     }
 }
