@@ -1,6 +1,5 @@
 package part5.Cube;
 
-
 public class Cube {
   private int edgeLength;
 
