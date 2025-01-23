@@ -32,8 +32,8 @@ public class SimpleCollection {
             if(longestWord.length() < longest.length()) {
                 longestWord = longest;
             }
-
         }
+
         return longestWord;
     }
 
