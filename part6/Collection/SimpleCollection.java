@@ -38,6 +38,7 @@ public class SimpleCollection {
             listElements = elements.get(0);
             return "The collection " + this.name + " has " + count + " element:\n" + listElements;
         } else {
+
             for(String element : elements) {
             listElements += element + "\n";
 
