@@ -26,8 +26,6 @@ public class SimpleCollection {
             return null;
         }
 
-
-
         String longestWord = this.elements.get(0);
 
         for(String longest : this.elements) {
