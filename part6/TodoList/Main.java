@@ -16,6 +16,3 @@ public class Main {
         user.start();
     }
 }
-
-
-}
