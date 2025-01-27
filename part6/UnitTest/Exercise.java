@@ -1,8 +1,5 @@
 package part6.UnitTest;
 
-import java.util.ArrayList;
-
-
 public class Exercise {
     private String name;
     private boolean completed;
