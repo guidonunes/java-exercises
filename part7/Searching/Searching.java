@@ -1,4 +1,4 @@
-package part7;
+package part7.Searching;
 
 
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ public class Searching {
         } else {
             System.out.println("Found it! " + books.get(binarySearchId));
         }
-
+        scanner.close();
     }
 
     public static int linearSearch(ArrayList<Book> books, int searchedId) {
@@ -57,6 +57,23 @@ public class Searching {
     }
 
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
-        return -1;
-    }
+      int begin = 0;
+      int end = books.size()-1;
+
+      while(begin <= end) {
+          int middle = (end + begin)/2;
+          long middleId = books.get(middle).getId();
+
+
+          if(middleId == searchedId) {
+              return middle;
+          } else if(middleId < searchedId) {
+              begin = middle + 1;
+          } else {
+              end = middle - 1;
+          }
+      }
+
+      return -1;
+  }
 }
