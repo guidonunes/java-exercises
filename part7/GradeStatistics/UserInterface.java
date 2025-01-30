@@ -38,7 +38,10 @@ public class UserInterface {
     }
 
     public void averageOfPoints() {
-
         System.out.println("Point average (all): " + register.averageOfPoints());
     }
+
+    public void passingGrade() {
+      System.out.println("Point average (passing): " + register.passingGrade());
+  }
 }
