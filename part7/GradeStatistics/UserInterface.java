@@ -44,4 +44,8 @@ public class UserInterface {
     public void passingGrade() {
       System.out.println("Point average (passing): " + register.passingGrade());
   }
+
+    public void passPercentage() {
+      System.out.println("Pass percentage: " + register.passPercentage());
+  }
 }

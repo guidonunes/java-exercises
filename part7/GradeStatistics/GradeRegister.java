@@ -87,4 +87,21 @@ public class GradeRegister {
       }
       return 1.0 * sum/count;
   }
+
+  public double passPercentage() {
+      if (this.examPoints.isEmpty()) {
+      return -1;
+      }
+
+      int totalStudents = this.examPoints.size();
+      int passingStudents = 0;
+
+
+      for (int points : this.examPoints) {
+          if (points >= 50) {
+          passingStudents++;
+          }
+      }
+      return 100.0 * passingStudents / totalStudents;
+  }
 }
