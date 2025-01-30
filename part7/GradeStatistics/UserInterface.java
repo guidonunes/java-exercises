@@ -37,6 +37,26 @@ public class UserInterface {
         }
     }
 
+    public void printGradeDistribution() {
+      int grade = 5;
+      while (grade >= 0) {
+          int stars = register.numberOfGrades(grade);
+          System.out.print(grade + ": ");
+          printsStars(stars);
+          System.out.println("");
+
+          grade = grade - 1;
+      }
+
+    }
+
+    public static void printsStars(int stars) {
+      while (stars > 0) {
+          System.out.print("*");
+          stars--;
+      }
+    }
+
     public void averageOfPoints() {
         System.out.println("Point average (all): " + register.averageOfPoints());
     }
