@@ -66,4 +66,25 @@ public class GradeRegister {
 
         return 1.0 * sum/size;
     }
+
+    public double passingGrade() {
+
+      if(this.examPoints.isEmpty()) {
+          return -1;
+      }
+
+      int size = examPoints.size();
+      int sum = 0;
+      int count = 0;
+
+
+      for (int i = 0; i < size; i++) {
+          int grade = this.examPoints.get(i);
+          if(grade >= 50) {
+              sum += grade;
+              count++;
+          }
+      }
+      return 1.0 * sum/count;
+  }
 }
