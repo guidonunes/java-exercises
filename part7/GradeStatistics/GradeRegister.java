@@ -16,6 +16,17 @@ public class GradeRegister {
         this.examPoints.add(points);
     }
 
+    public int numberOfGrades(int grade) {
+      int count = 0;
+      for (int received: this.grades) {
+          if (received == grade) {
+              count++;
+          }
+      }
+
+      return count++;
+    }
+
     public static int pointsToGrade(int points) {
 
         int grade = 0;
