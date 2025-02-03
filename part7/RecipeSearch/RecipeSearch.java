@@ -1,7 +1,6 @@
 package part7.RecipeSearch;
 
 
-i
 import java.util.Scanner;
 import java.nio.file.Paths;
 
@@ -18,46 +17,111 @@ public class RecipeSearch {
         System.out.println("Commands:");
         System.out.println("list - lists the recipes");
         System.out.println("stop - stops the program");
+        System.out.println("find name - searches recipes by name");
+        System.out.println("find cooking time - searches recipes by cooking time");
 
         System.out.println("");
 
-        System.out.print("Enter command: ");
-        String command = scanner.nextLine();
+        while (true) {
+            System.out.print("Enter command: ");
+            String command = scanner.nextLine();
 
-        if (command.equals("stop")) {
-            System.out.println("Bye!");
-            return;
-        }
+            if (command.equals("stop")) {
+                System.out.println("Bye!");
+                break;
+            }
 
-        if (command.equals("list")) {
-            try(Scanner read = new Scanner(Paths.get(file))) {
-                while(read.hasNextLine()) {
-                    String name = read.nextLine().trim();
+            try (Scanner read = new Scanner(Paths.get(file))) {
+                if (command.equals("list")) {
+                    while (read.hasNextLine()) {
+                        String name = read.nextLine().trim();
 
-                    if(name.isEmpty()) {
-                        continue;
-                    }
+                        if (name.isEmpty()) {
+                            continue;
+                        }
 
-                    if(read.hasNextLine()) {
                         String time = read.nextLine().trim();
-                        System.out.println(name + ", cooking time: " + time);
+                        String recipe = name + ", cooking time: " + time;
 
-                        while(read.hasNextLine()) {
+                        System.out.println(recipe);
+
+
+                        while (read.hasNextLine()) {
                             String nextLine = read.nextLine().trim();
-                            if(nextLine.isEmpty()) {
+                            if (nextLine.isEmpty()) {
                                 break;
                             }
                         }
                     }
+                } else if (command.equals("find name")) {
+                    System.out.print("Searched word: ");
+                    String word = scanner.nextLine().trim();
+
+                    boolean found = false;
+
+                    while (read.hasNextLine()) {
+                        String name = read.nextLine().trim();
+
+                        if (name.isEmpty()) {
+                            continue;
+                        }
+
+                        String time = read.nextLine().trim();
+                        String recipe = name + ", cooking time: " + time;
+
+
+                        if (name.contains(word)) {
+                            System.out.println(recipe);
+                            found = true;
+                        }
+
+
+                        while (read.hasNextLine()) {
+                            String nextLine = read.nextLine().trim();
+                            if (nextLine.isEmpty()) {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!found) {
+                        System.out.println("Not found");
+                    }
+                } else if (command.equals("find cooking time")) {
+                    System.out.print("Max cooking time: ");
+                    Integer number = Integer.valueOf(scanner.nextLine());
+
+                    boolean found = false;
+
+                    while (read.hasNextLine()) {
+                        String name = read.nextLine().trim();
+
+                        if (name.isEmpty()) {
+                            continue;
+                        }
+
+                        String time = read.nextLine().trim();
+                        String recipe = name + ", cooking time: " + time;
+
+                        if (number >= Integer.parseInt(time)) {
+                            System.out.println(recipe);
+                            found = true;
+                        }
+
+                        while (read.hasNextLine()) {
+                            String nextLine = read.nextLine().trim();
+                            if (nextLine.isEmpty()) {
+                                break;
+                            }
+                        }
+                    }
+
+
                 }
 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
-
-
-
-
     }
 }
