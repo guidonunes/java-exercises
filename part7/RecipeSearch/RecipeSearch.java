@@ -19,6 +19,8 @@ public class RecipeSearch {
         System.out.println("stop - stops the program");
         System.out.println("find name - searches recipes by name");
         System.out.println("find cooking time - searches recipes by cooking time");
+        System.out.println("find ingredient - searches recipes by ingredient");
+
 
         System.out.println("");
 
@@ -117,7 +119,55 @@ public class RecipeSearch {
                     }
 
 
-                }
+                } else if (command.equals("find ingredient")) {
+                  System.out.print("Ingredient: ");
+                  String ingredient = scanner.nextLine().trim();
+
+                  boolean found = false;
+                  System.out.println("\nRecipes:");
+
+                  while (read.hasNextLine()) {
+                      String name = read.nextLine().trim();
+
+                      if (name.isEmpty()) {
+                          continue;
+                      }
+
+                      String time = read.nextLine().trim();
+
+
+                      StringBuilder ingredientsBuilder = new StringBuilder();
+
+                      while (read.hasNextLine()) {
+                          String nextLine = read.nextLine().trim();
+                          if (nextLine.isEmpty()) {
+                              break;
+                          }
+                          ingredientsBuilder.append(nextLine).append("\n");
+                      }
+
+                      String ingredients = ingredientsBuilder.toString().trim();
+
+
+                      String[] ingredientList = ingredients.split("\n");
+                      boolean containsIngredient = false;
+                      for (String ing : ingredientList) {
+                          if (ing.equals(ingredient)) {
+                              containsIngredient = true;
+                              break;
+                          }
+                      }
+
+                      if (containsIngredient) {
+                          System.out.println(name + ", cooking time: " + time);
+                          found = true;
+                      }
+                  }
+
+                  if (!found) {
+                      System.out.println("No recipes found with the ingredient: " + ingredient);
+                  }
+              }
 
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
