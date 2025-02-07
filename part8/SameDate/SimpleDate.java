@@ -1,4 +1,3 @@
-package SameDate;
 
 public class SimpleDate {
 
