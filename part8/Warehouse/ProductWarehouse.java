@@ -14,5 +14,7 @@ public class ProductWarehouse extends Warehouse {
       return this.productName;
   }
 
-
+  public String toString() {
+    return this.productName + ": " + super.toString();
+  }
 }
