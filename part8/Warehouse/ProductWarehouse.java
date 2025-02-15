@@ -14,6 +14,8 @@ public class ProductWarehouse extends Warehouse {
       return this.productName;
   }
 
+
+  @Override
   public String toString() {
     return this.productName + ": " + super.toString();
   }
