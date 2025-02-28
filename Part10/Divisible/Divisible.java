@@ -1,4 +1,4 @@
-package Divisible;
+package Part10.Divisible;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
