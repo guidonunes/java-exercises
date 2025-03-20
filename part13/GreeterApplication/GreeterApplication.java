@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 public class GreeterApplication extends Application {
 
+    @Override
     public void start(Stage window) throws Exception {
         Label instructionText = new Label("Enter your name and start.");
         TextField nameField = new TextField();
